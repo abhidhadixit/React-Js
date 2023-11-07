@@ -1,11 +1,20 @@
-import React from "react";
-import './App.css';
-import UserTable from "./components/UserTable";
+
+import { useState } from 'react';
+import Header from './components/Header';
+import Body from './components/Body';
 
 function App() {
+  
+  const [date,setDate]=useState('');
+  const [age,setAge]=useState(null);
   return (
     <div className="App">
-      <UserTable/>
+      <Header />
+      <Body 
+      date = {date}
+      setDate = {setDate} 
+      age = {age}
+      setAge = {setAge}/>
     </div>
   );
 }
